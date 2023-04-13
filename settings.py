@@ -11,24 +11,32 @@ GROUND_WIDTH = 200  # Ground Width
 GROUND_HEIGHT = HEIGHT - GROUND_WIDTH  # Ground Height
 CAT_WIDTH, CAT_HEIGHT = 162, 141  # Cat Dimension
 TREE_WIDTH, TREE_HEIGHT = 264, 333
+HOUSE_WIDTH, HOUSE_HEIGHT = 300, 340
+HOUSE_GROUND_OFFSET = 20
 FPS = 60  # Game FPS
 TARGET_FONT = pg.font.Font('assets/font/BubblegumSans.ttf', 150)
-SCORE_FONT = pg.font.Font('assets/font/Purrfect.ttf', 70)
+SCORE_FONT = pg.font.Font('assets/font/Purrfect.ttf', 100)
+TITLE_FONT = pg.font.Font('assets/font/KittenSwash.ttf', 100)
 
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLACK = (0, 0, 0)
 
 TREE_SPAWN_FREQ = 3000
+HOUSE_SPAWN_FREQ = 300000
+DELAY_TIME = 3000
 MOVING_SPEED = 3
 
 # Game Events
 CORRECT_TYPING = pg.USEREVENT + 1
 TREE_SPAWN = pg.USEREVENT + 2
+HOUSE_SPAWN = pg.USEREVENT + 3
+NEXT_MUSIC = pg.USEREVENT + 4
 
 # Image Path
 SKY_BACKGROUND = 'assets/background/sky.png'
 GROUND_BACKGROUND = 'assets/background/ground.png'
+CAT_STAND = 'assets/cat/Stand.png'
 CAT_WALK = ['assets/cat/Walk1.png', 'assets/cat/Walk2.png', 'assets/cat/Walk3.png', 'assets/cat/Walk4.png', 'assets/cat/Walk5.png',
             'assets/cat/Walk6.png', 'assets/cat/Walk7.png', 'assets/cat/Walk8.png', 'assets/cat/Walk9.png', 'assets/cat/Walk10.png']
 
@@ -41,10 +49,17 @@ TREE_TYPE = {
     'grass_tree1': 'assets\plants\grass_tree1.png',
     'grass_tree2': 'assets\plants\grass_tree2.png'
 }
+HOUSE = 'assets/house/home.png'
 
 # Sound Path
 JUMP_SOUND = 'assets/sound effect/Meow.ogg'
 HIT_SOUND = 'assets/sound effect/hit.wav'
+WIN_SOUND = 'assets/sound effect/win.ogg'
+
+# Music Path
+PREGAME_MUSIC = 'assets/music/GrayTrip.mp3'
+INGAME_MUSIC = ['assets/music/HappyTune.mp3',
+                'assets/music/TakeATrip.ogg', 'assets/music/TownTheme.mp3']
 
 # Word Bank
 WORDBANK = ["apple", "banana", "cactus", "dolphin", "elephant", "fitness", "guitar", "happiness", "island", "jacket", "kitchen", "lovely", "money", "network", "ocean", "paradise", "question", "romantic", "sunset", "tourist", "universe", "vacation", "wonderful", "xylophone", "yellow", "zebra", "airport", "beautiful", "capital", "dance", "education", "freedom", "government", "hospital", "internet", "journey", "knowledge", "library", "medicine", "natural", "oasis", "peaceful", "quality", "romance", "success", "television", "ultimate", "victory", "wealth", "extraordinary", "friendship", "generous", "hospitality", "imagination", "jubilant", "kindness", "laughter", "miracle", "nature", "optimistic", "passionate", "quest", "romanticism", "satisfied", "triumph", "unbelievable", "vibrant", "wisdom", "xenial", "youthful", "zestful", "adventure", "beauty", "challenge", "dazzling", "excitement", "friendship", "generosity", "honesty", "innovation", "joyful", "kindhearted", "luxury", "music", "optimism", "passion", "quaint", "romance", "satisfaction", "travelling", "understanding", "vitality", "warmth", "xtraordinary", "youthfulness", "zeal", "affection", "blessed", "charming", "delight", "enthusiasm", "fascinating", "generous", "humility", "innovative", "jovial", "kindness", "love", "marvelous", "nourishing", "optimistic", "peace", "quality", "relaxation", "sensual", "thriving", "uplifting", "vibrance",
