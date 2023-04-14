@@ -29,7 +29,7 @@ The game should now start, and you can enjoy playing "A Trip Home." Follow the o
 
 Troubleshooting:
 
-1. If you encounter any issues while installing the libraries or running the game, make sure you have the latest version of Python and the required libraries installed. You can use the venv file provided for game necessary libraries.
+1. If you encounter any issues while installing the libraries or running the game, make sure you have the latest version of Python and the required libraries installed. You can use the the .venv folder provided for game necessary libraries.
 2. Ensure that all game files, including assets and settings, are in the same folder as the main Python script.
 3. If you still experience issues, consult the game's documentation, forums, or contact the developer for assistance.
 
