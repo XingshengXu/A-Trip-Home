@@ -7,13 +7,20 @@ These settings can be easily accessed and used throughout the game by importing 
 """
 # Game Main Settings
 WIDTH, HEIGHT = 1600, 900  # Game Window Display
-GROUND_WIDTH = 200  # Ground Width
-GROUND_HEIGHT = HEIGHT - GROUND_WIDTH  # Ground Height
+GROUND_DEPTH = 200  # Ground Depth
+GROUND_HEIGHT = HEIGHT - GROUND_DEPTH  # Ground Height
+GAMENAME_HEIGHT = HEIGHT // 5  # Game Name Height
+GAMEMESSAGE_HEIGHT = HEIGHT // 1.25  # Game Message Height
+TEXTTARGET_HEIGHT = GROUND_HEIGHT // 3  # Text Target Height
+SCOREMESSAGE_HEIGHT = HEIGHT//1.25  # Score Message Height
 CAT_WIDTH, CAT_HEIGHT = 162, 141  # Cat Dimension
+DOG_WIDTH, DOG_HEIGHT = 162, 141  # Dog Dimension
 TREE_WIDTH, TREE_HEIGHT = 264, 333
 HOUSE_WIDTH, HOUSE_HEIGHT = 300, 340
 HOUSE_GROUND_OFFSET = 20
 FPS = 60  # Game FPS
+GRAVITY = -20
+
 TARGET_FONT = pg.font.Font('assets/font/BubblegumSans.ttf', 150)
 SCORE_FONT = pg.font.Font('assets/font/Purrfect.ttf', 100)
 TITLE_FONT = pg.font.Font('assets/font/KittenSwash.ttf', 100)
@@ -24,14 +31,17 @@ BLACK = (0, 0, 0)
 
 TREE_SPAWN_FREQ = 3000
 HOUSE_SPAWN_FREQ = 300000
+DOG_SPAWN_FREQ = 30000
 DELAY_TIME = 3000
 MOVING_SPEED = 3
+EASTEREGG_PROB = 0.065
 
 # Game Events
 CORRECT_TYPING = pg.USEREVENT + 1
 TREE_SPAWN = pg.USEREVENT + 2
 HOUSE_SPAWN = pg.USEREVENT + 3
-NEXT_MUSIC = pg.USEREVENT + 4
+DOG_SPAWN = pg.USEREVENT + 4
+NEXT_MUSIC = pg.USEREVENT + 5
 
 # Image Path
 SKY_BACKGROUND = 'assets/background/sky.png'
@@ -42,6 +52,10 @@ CAT_WALK = ['assets/cat/Walk1.png', 'assets/cat/Walk2.png', 'assets/cat/Walk3.pn
 
 CAT_JUMP = ['assets/cat/Jump1.png', 'assets/cat/Jump2.png', 'assets/cat/Jump3.png', 'assets/cat/Jump4.png',
             'assets/cat/Jump5.png', 'assets/cat/Jump6.png', 'assets/cat/Jump7.png', 'assets/cat/Jump8.png']
+
+DOG_RUN = ['assets/dog/Run1.png', 'assets/dog/Run2.png', 'assets/dog/Run3.png', 'assets/dog/Run4.png',
+           'assets/dog/Run5.png', 'assets/dog/Run6.png', 'assets/dog/Run7.png', 'assets/dog/Run8.png']
+
 TREE_TYPE = {
     'common_tree': 'assets\plants\common_tree.png',
     'cypress_tree1': 'assets\plants\cypress_tree1.png',
@@ -55,6 +69,7 @@ HOUSE = 'assets/house/home.png'
 JUMP_SOUND = 'assets/sound effect/Meow.ogg'
 HIT_SOUND = 'assets/sound effect/hit.wav'
 WIN_SOUND = 'assets/sound effect/win.ogg'
+BARK_SOUND = 'assets/sound effect/dog_barking.wav'
 
 # Music Path
 PREGAME_MUSIC = 'assets/music/GrayTrip.mp3'
