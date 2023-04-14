@@ -5,35 +5,36 @@ pg.init()
 The settings module for the "A Trip Home" game. This module contains all the default settings for the gameplay. 
 These settings can be easily accessed and used throughout the game by importing the module into the main game file.
 """
-# Game Main Settings
-WIDTH, HEIGHT = 1600, 900  # Game Window Display
+
+# Game Dimensions
+WIDTH, HEIGHT = 1600, 900  # Game Window Display Dimensions
 GROUND_DEPTH = 200  # Ground Depth
 GROUND_HEIGHT = HEIGHT - GROUND_DEPTH  # Ground Height
 GAMENAME_HEIGHT = HEIGHT // 5  # Game Name Height
 GAMEMESSAGE_HEIGHT = HEIGHT // 1.25  # Game Message Height
 TEXTTARGET_HEIGHT = GROUND_HEIGHT // 3  # Text Target Height
 SCOREMESSAGE_HEIGHT = HEIGHT//1.25  # Score Message Height
-CAT_WIDTH, CAT_HEIGHT = 162, 141  # Cat Dimension
-DOG_WIDTH, DOG_HEIGHT = 162, 141  # Dog Dimension
-TREE_WIDTH, TREE_HEIGHT = 264, 333
-HOUSE_WIDTH, HOUSE_HEIGHT = 300, 340
-HOUSE_GROUND_OFFSET = 20
-FPS = 60  # Game FPS
-GRAVITY = -20
+CAT_WIDTH, CAT_HEIGHT = 162, 141  # Cat Dimensions
+DOG_WIDTH, DOG_HEIGHT = 162, 141  # Dog Dimensions
+TREE_WIDTH, TREE_HEIGHT = 264, 333  # Tree Dimensions
+HOUSE_WIDTH, HOUSE_HEIGHT = 300, 340  # House Dimensions
+HOUSE_GROUND_OFFSET = 20  # House Ground Offset
 
+# FPS, Gravity, and Moving Speed
+FPS = 60
+GRAVITY = -20
+MOVING_SPEED = 3
+
+# Font
 TARGET_FONT = pg.font.Font('assets/font/BubblegumSans.ttf', 150)
 SCORE_FONT = pg.font.Font('assets/font/Purrfect.ttf', 100)
 TITLE_FONT = pg.font.Font('assets/font/KittenSwash.ttf', 100)
 
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLACK = (0, 0, 0)
-
+# Spawn Frequence and Delay Time
 TREE_SPAWN_FREQ = 3000
 HOUSE_SPAWN_FREQ = 300000
 DOG_SPAWN_FREQ = 30000
 DELAY_TIME = 3000
-MOVING_SPEED = 3
 EASTEREGG_PROB = 0.065
 
 # Game Events
@@ -46,6 +47,7 @@ NEXT_MUSIC = pg.USEREVENT + 5
 # Image Path
 SKY_BACKGROUND = 'assets/background/sky.png'
 GROUND_BACKGROUND = 'assets/background/ground.png'
+HOUSE = 'assets/house/home.png'
 CAT_STAND = 'assets/cat/Stand.png'
 CAT_WALK = ['assets/cat/Walk1.png', 'assets/cat/Walk2.png', 'assets/cat/Walk3.png', 'assets/cat/Walk4.png', 'assets/cat/Walk5.png',
             'assets/cat/Walk6.png', 'assets/cat/Walk7.png', 'assets/cat/Walk8.png', 'assets/cat/Walk9.png', 'assets/cat/Walk10.png']
@@ -63,7 +65,6 @@ TREE_TYPE = {
     'grass_tree1': 'assets\plants\grass_tree1.png',
     'grass_tree2': 'assets\plants\grass_tree2.png'
 }
-HOUSE = 'assets/house/home.png'
 
 # Sound Path
 JUMP_SOUND = 'assets/sound effect/Meow.ogg'
