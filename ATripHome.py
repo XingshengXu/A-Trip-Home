@@ -312,7 +312,7 @@ class Game:
         pg.mixer.music.set_endevent(NEXT_MUSIC)
 
     def main_loop(self):
-        '''This is the game main loop.'''
+        """This is the game main loop."""
         while True:
             self.clock.tick(FPS)
             self.flash_counter += 1
