@@ -1,7 +1,7 @@
 # A Trip Home
 
 ## Introduction
-With colorful graphics, lively music, and engaging gameplay, "A Trip Home" is the perfect game for players of all ages who love typing games and cute cat. Also, with a low change, you will run into a secret Easter egg. So grab your keyboard and get ready to help the cat make its way home in this pawsome five minutes adventure!
+With colorful graphics, lively music, and engaging gameplay, "A Trip Home" is the perfect game for players of all ages who love typing games and cute cat. Also, with a low chance, you will run into a secret Easter egg. So grab your keyboard and get ready to help the cat make its way home in this pawsome five minutes adventure!
 
 ## Game Features
 1. Beautiful graphics and smooth animations make for an immersive gaming experience.
